@@ -1,0 +1,19 @@
+<mvc:View controllerName="home.kpmg.Exercise2.controller.MainView1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Button id="helloDialogButton" text="{i18n>openDialogButtonText}" press=".onOpenDialog" class="sapUiSmallMarginEnd"/>
+						<Input value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%"/>
+						<Panel headerText="{i18n>tablePanelTitle}" class="sapUiResponsiveMargin" width="auto">
+							<List headerText="Products" items="{ path: 'productsModel>/ProductCollection' }">
+								<StandardListItem title="{productsModel>Name}" description="{productsModel>Description}" counter="{productsModel>Quantity}"/>
+							</List>
+						</Panel>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
